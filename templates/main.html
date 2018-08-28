@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>main</title>
+</head>
+<body>
+    <h1>My CAT's</h1>
+    <table>
+        <thead>
+          <tr>
+            <th>#</th>
+              <th>Имя</th>
+              <th>Пол</th>
+              <th>Возраст</th>
+              <th>Цвет</th>
+              <th>Вес</th>
+              <th>Длина Волос</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for cat in cats %}
+            <tr>
+                <td>{{ cat.pk }}</td>
+                <td>{{ cat.name }}</td>
+                <td>{{ cat.gender }}</td>
+                <td>{{ cat.age }}</td>
+                <td>{{ cat.color }}</td>
+                <td>{{ cat.weight }}</td>
+                <td>{{ cat.hair }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+</body>
+</html>
